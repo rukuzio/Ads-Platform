@@ -6,4 +6,4 @@ __pycache__
 *.db
 .env
 .vscode
-.idea/
+.idea/terraform.tfvars
