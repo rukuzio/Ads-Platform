@@ -5,8 +5,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
-from database import SessionLocal, engine, Base
-import crud
+from app.database import SessionLocal, engine, Base
+from app import crud
 
 #from app.config import DATABASE_URL
 
@@ -18,7 +18,8 @@ app = FastAPI()
 static_dir = Path(__file__).parent / "static"
 app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 
-templates = Jinja2Templates(directory="app/templates")
+templates_dir = Path(__file__).parent / "templates"
+templates = Jinja2Templates(directory=str(templates_dir))
 
 
 def get_db():
