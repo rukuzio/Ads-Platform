@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from . import models
+import models
 
 
 def get_ads(db: Session):
