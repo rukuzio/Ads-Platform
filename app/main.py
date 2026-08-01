@@ -5,8 +5,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
-from .database import SessionLocal, engine, Base
-from . import crud
+from database import SessionLocal, engine, Base
+import crud
 
 #from app.config import DATABASE_URL
 
